@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Job Recommender</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <!-- <nav class="navbar">
+    <span class="brand">JobFinder</span>
+    <a href="{{ url_for('index') }}">Home</a>
+  </nav> -->
+  <header class="header" style="background-color: black;">
+    <nav>
+    <div class="navbar">
+        <div class="logo">
+            <img src="../static/images/logo.jpeg" style="height: 40px; margin-right: 10px;">
+            <span>CareerCraft</span>
+        </div>
+
+        <div class="nav-links" >
+            <a href="../../frontend/index.html">Home</a>
+            <a href="../../frontend/index.html">About Us</a>
+            <a href="../../dashboard/index.html">My Dashboard</a>
+            <a href="../../frontend/index.html">Feature</a>
+
+           
+                <a href="../../authentication/login/index.html" class="btn btn-outline-primary">LOGIN</a>
+            
+
+            <button class="btn btn-primary">SIGN UP</button>
+        </div>
+    </div>
+    </nav>
+</header>
+
+  <main class="container">
+  {% block content %}{% endblock %}
+  </main>
+  
+
+  <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-0-1s">
+                    <h5 class="fw-bold text-primary mb-3">CareerCraft</h5>
+                    <p class="text-white-50">Your definitive journey to a fulfilling and prosperous career unequivocally
+                        starts here. We are dedicated to empowering you with the essential tools for unmatched success.
+                    </p>
+                    <div class="social-links mt-3">
+                        <a href="#"
+                            class="text-decoration-none text-white-50 me-3 fs-5 hover-primary animate__animated animate__bounceIn animate__delay-0-2s"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="text-decoration-none text-white-50 me-3 fs-5 hover-primary animate__animated animate__bounceIn animate__delay-0-3s"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#"
+                            class="text-decoration-none text-white-50 me-3 fs-5 hover-primary animate__animated animate__bounceIn animate__delay-0-4s"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#"
+                            class="text-decoration-none text-white-50 fs-5 hover-primary animate__animated animate__bounceIn animate__delay-0-5s"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 animate__animated animate__fadeInUp animate__delay-0-6s">
+                    <h5 class="fw-bold text-primary mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#hero"
+                                class="text-white-50 text-decoration-none hover-primary">Home</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white-50 text-decoration-none hover-primary">About
+                                Us</a></li>
+                        <li class="mb-2"><a href="#features"
+                                class="text-white-50 text-decoration-none hover-primary">Features</a></li>
+                        <li class="mb-2"><a href="#creators"
+                                class="text-white-50 text-decoration-none hover-primary">Our Team</a></li>
+                        <li class="mb-2"><a href="#contact"
+                                class="text-white-50 text-decoration-none hover-primary">Contact</a></li>
+                        <li class="mb-2"><a href="#faq" class="text-white-50 text-decoration-none hover-primary">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-0-8s">
+                    <h5 class="fw-bold text-primary mb-3">Our Core Features</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">AI Mock
+                                Interview</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-white-50 text-decoration-none hover-primary">Personalized Career Roadmap</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Profile
+                                Evaluation</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Skill Gap
+                                Analysis</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Real-Time
+                                Job Matching</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Advanced
+                                Resume Builder</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp animate__delay-1s">
+                    <h5 class="fw-bold text-primary mb-3">Contact Information</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> 123 Career Blvd, Suite
+                            400, Future City, FC 12345</li>
+                        <li class="mb-2"><i class="fas fa-phone-alt me-2 text-primary"></i> <a href="tel:+15551234567"
+                                class="text-white-50 text-decoration-none hover-primary">+1 (555) 123-4567</a></li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2 text-primary"></i> <a
+                                href="mailto:info@careercraft.com"
+                                class="text-white-50 text-decoration-none hover-primary">info@careercraft.com</a></li>
+                        <li class="mb-2"><i class="fas fa-clock me-2 text-primary"></i> Mon-Fri: 9:00 AM - 5:00 PM EST
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="row">
+                <div
+                    class="col-md-6 text-center text-md-start text-white-50 animate__animated animate__fadeInLeft animate__delay-1-2s">
+                    &copy; 2025 CareerCraft. All rights reserved. Crafting your future. Made With ❤️ By Coders Bay.
+                </div>
+                <div
+                    class="col-md-6 text-center text-md-end animate__animated animate__fadeInRight animate__delay-1-2s">
+                    <a href="#" class="text-white-50 text-decoration-none me-3 hover-primary">Privacy Policy</a>
+                    <a href="#" class="text-white-50 text-decoration-none hover-primary">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
+
+

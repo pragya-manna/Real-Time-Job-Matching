@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Find Jobs{% endblock %}
+
+{% block content %}
+<section class="hero-section py-5 text-center bg-light">
+  <div class="container py-5">
+    <h1 class="display-3 fw-bold text-dark mb-4" style="padding-top: 50pt;">Find Your Dream Job, Real-time.</h1>
+    <p class="lead text-muted mb-5">Match your skills. Discover opportunities. Get hired faster.</p>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <form method="POST" class="d-flex flex-column flex-md-row gap-3 shadow p-4 rounded-3 bg-white">
+          <!-- Keywords Input with Suggestions -->
+          <input name="keywords" list="keyword-list" placeholder="Enter Skills" required>
+          <datalist id="keyword-list">
+            <option value="Python, TensorFlow, Flask">
+            <option value="AI, ML, Deep Learning">
+            <option value="HTML, CSS, JavaScript, Ajax">
+            <option value="React, Angular, Vue.js">
+            <option value="Node.js, Express, MongoDB">
+            <option value="Java, Spring Boot, Hibernate">
+            <option value="C++, C#, .NET">
+            <option value="SQL, PostgreSQL, MySQL">
+            <option value="AWS, Azure, Google Cloud">
+            <option value="DevOps, Docker, Kubernetes">
+          </datalist>
+
+          <!-- Location Input with Suggestions -->
+          <input name="location" list="location-list" placeholder="Enter Location">
+          <datalist id="location-list">
+            <option value="Mumbai, India">
+            <option value="San Francisco, CA">
+            <option value="New York, NY">
+            <option value="Seattle, WA">
+            <option value="Austin, TX">
+            <option value="Los Angeles, CA">
+            <option value="Boston, MA">
+            <option value="Chicago, IL">
+            <option value="Denver, CO">
+            <option value="Atlanta, GA">
+            <option value="Remote">
+          </datalist>
+
+          <button type="submit" class="search-btn">Search Job</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
