@@ -1,0 +1,7 @@
+# .gitignore
+.env
+__pycache__/
+*.pyc
+*.log
+*.sqlite3
+*.db
